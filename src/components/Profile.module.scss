@@ -1,0 +1,99 @@
+.content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 28vh 0;
+    @media screen and (min-width: 1025px) {
+        width: 1024px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 30vh 0; 
+    }
+}
+
+.picture {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+    position: relative;
+    @media screen and (min-width: 1025px) {
+        width: 30%;
+        order: 2;
+        img {
+            width: 260px;
+            height: 260px;
+        }
+    }
+}
+
+.comment {
+    background-color: white;
+    display: inline-block;
+    position: absolute;
+    width: fit-content;
+    top: -16px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 8px 24px;
+    border-radius: 6px;
+    &::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: white;
+    }
+    @media screen and (min-width: 1025px) {
+        font-size: 1.5rem;
+        padding: 12px 32px;
+        top: -28px;
+    }
+}
+
+.title {
+    font-size: 2rem;
+    margin: 0 auto 16px;
+    text-align: center;
+    line-height: 1.4;
+    color: #333;
+    font-weight: bold;
+    @media screen and (min-width: 1025px) {
+        order: 1;
+        text-align: left;
+        width: 60%;
+        font-size: 4rem;
+        margin: 0;
+    }
+}
+
+.snsLink {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    li {
+        width: 50px;
+    }
+    li > a {
+        display: block;
+        width: 100%;
+        img {
+            vertical-align: bottom;
+        }
+    }
+    li + li {
+        margin-left: 16px;
+    }
+    @media screen and (min-width: 1025px) {
+        order: 3;
+        margin-top: 12px;
+    }
+}
